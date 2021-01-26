@@ -13,5 +13,6 @@ func main() {
 
 func handleEndpoint(w http.ResponseWriter, r *http.Request) {
 	log.Println("/demo-endpoint/text")
+	w.Header().Add("custom-header", "custom-value")
 	w.Write([]byte("ok from endpoint"))
 }
